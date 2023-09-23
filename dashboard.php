@@ -29,7 +29,7 @@
 					</div>
 				</div>
 			</a>		
-			<a href="index.php?room_mang&status=1">
+			<a href="index.php?room_mang&status=reserved">
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-bookmark color-orange"></em>
@@ -67,38 +67,46 @@
 			<hr>
 
 			<div class="row">
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding"><em class="fa fa-xl fa-reorder color-red"></em>
-							<div class="large"><?php include 'counters/bookedroom-count.php'?></div>
-							<div class="text-muted">Booked Rooms</div>
+				<a href="index.php?room_mang&status=booked">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding"><em class="fa fa-xl fa-reorder color-red"></em>
+								<div class="large"><?php include 'counters/bookedroom-count.php'?></div>
+								<div class="text-muted">Booked Rooms</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-blue panel-widget border-right">
-						<div class="row no-padding"><em class="fa fa-xl fa-check-circle color-green"></em>
-							<div class="large"><?php include 'counters/avrooms-count.php'?></div>
-							<div class="text-muted">Available Rooms</div>
+				</a>
+				<a href="index.php?room_mang&status=available">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-blue panel-widget border-right">
+							<div class="row no-padding"><em class="fa fa-xl fa-check-circle color-green"></em>
+								<div class="large"><?php include 'counters/avrooms-count.php'?></div>
+								<div class="text-muted">Available Rooms</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-orange panel-widget border-right">
-						<div class="row no-padding"><em class="fa fa-xl fa-check-square-o color-magg"></em>
-							<div class="large"><?php include 'counters/checkedin-count.php'?></div>
-							<div class="text-muted">Checked In</div>
+				</a>
+				<a href="index.php?room_mang&status=checked-in">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-orange panel-widget border-right">
+							<div class="row no-padding"><em class="fa fa-xl fa-check-square-o color-magg"></em>
+								<div class="large"><?php include 'counters/checkedin-count.php'?></div>
+								<div class="text-muted">Checked In</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-red panel-widget ">
-						<div class="row no-padding"><em class="fa fa-xl fa-spinner color-blue"></em>
-							<div class="large"><?php include 'counters/pendingpay-count.php'?></div>
-							<div class="text-muted">Total Pending Payments</div>
+				</a>
+				<a href="index.php?room_mang&status=pending-payment">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-red panel-widget ">
+							<div class="row no-padding"><em class="fa fa-xl fa-spinner color-blue"></em>
+								<div class="large"><?php include 'counters/pendingpay-count.php'?></div>
+								<div class="text-muted">Total Pending Payments</div>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div><!--/.row-->
 
 			<hr>
