@@ -1,0 +1,13 @@
+**Database Name: hotelms**
+
+hotel
+
+
+**Login Details**
+
+username: info@clone-technologies.com
+password: 201452064
+
+
+Username: harryden / harryden@gmail.com
+Password : 201452030
