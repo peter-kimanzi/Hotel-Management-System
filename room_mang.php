@@ -49,28 +49,32 @@
                         </thead>
                         <tbody>
                         <?php
-                        $room_query = "SELECT * FROM room JOIN room_type JOIN booking";
+                        $room_query = "SELECT *
+                        FROM room
+                        LEFT JOIN room_type ON room.room_type_id = room_type.room_type_id
+                        LEFT JOIN booking ON room.room_id = booking.room_id
+                        WHERE deleteStatus = '0'";
                         
                         if(isset($_GET['status'])) {
                             switch ($_GET['status']) {
                                 case 'reserved':
-                                    $room_query = $room_query." WHERE check_in_status = '0' AND status IS NOT NULL";
+                                    $room_query = $room_query." AND check_in_status = '0' AND status IS NOT NULL";
                                     break;
                                     
                                 case 'booked':
-                                    $room_query = $room_query." WHERE status = '1'";
+                                    $room_query = $room_query." AND status = '1'";
                                     break;
                                     
                                 case 'available':
-                                    $room_query = $room_query." WHERE check_in_status = '0' AND status IS NULL OR status = '0'";
+                                    $room_query = $room_query." AND check_in_status = '0' AND status IS NULL OR status = '0'";
                                     break;
                                     
                                 case 'checked-in':
-                                    $room_query = $room_query." WHERE check_in_status = '1'";
+                                    $room_query = $room_query." AND check_in_status = '1'";
                                     break;
                                     
                                 case 'pending-payment':
-                                    $room_query = $room_query." WHERE booking.payment_status = '0'";
+                                    $room_query = $room_query." AND booking.payment_status = '0'";
                                     break;
                             }
                         }
