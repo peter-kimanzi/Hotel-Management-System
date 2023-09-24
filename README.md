@@ -6,3 +6,5 @@
 * HTML
 * CSS
 * JavaScript
+
+## All fanctionalities working
