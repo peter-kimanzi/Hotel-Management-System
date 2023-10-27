@@ -2,8 +2,6 @@
 
 Manage your hotel operations with ease using this PHP-based Hotel Management System.
 
-![Hotel Management System](https://github.com/peter-kimanzi/Hotel-Management-System/assets/71552773/fe5a164a-3b5f-4535-be2c-8c665e7f81c0)
-
 ## Features
 
 - Booking and reservation management.
